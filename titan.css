@@ -213,6 +213,7 @@ h1 {}
 	width: 100%;
 	height: 291px;
 	position: relative;
+	overflow: hidden;
 }
 .layer img {
 	position: absolute;
@@ -220,8 +221,13 @@ h1 {}
 	left: 0px;
 	z-index: 1;
 	width:100%; 
-	height: 100%;   
+	height: 100%; 
+	transform: scaley(1.0);
+	transition: 0.4s;
 
+}
+.layer:hover img {
+	transform: scaley(1.5);
 }
 .layer .goi {
 	width: 100%;
@@ -232,10 +238,13 @@ h1 {}
 	left: 0px;
 	z-index: 2;
 	opacity:0;
-	transition:0.4s
+	transition:0.4s;
+	transform: scale(0);
+
 }
 .layer:hover .goi {
 	opacity:1;
+	transform: scale(1);
 }
 .noidung3 .hop{
 	padding: 0;
